@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card{
+            box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.1);
+            border: none;
+            border-radius: 15px;
+            background-color: rgba(255,255,255,0.1);
+        }
+        .form-check-input {
+            margin-right: 5px;
+        }
+        .correct-answer {
+            color: green;
+        }
+        .wrong-answer {
+            color: red;
+        }
+        body{
+            background-color: #1d3557;
+        }
+        #card{
+            background-color: #457b9d;
+        }
+        #btn{
+            background-color: #a8dadc;
+        }
+    </style>
+</head>
+<body>
+    <div class="maindiv d-flex justify-content-center align-items-center">
+        <div class="col-md-8">
+            <div class="card p-4 my-4" id="card">
+                <div class="heading ">
+                    <h3 class="d-flex justify-content-center">Saylani Quiz App</h3>
+                    <h4 class="d-flex justify-content-center">Questions</h4>
+                </div>
+                <div class="signinform mt-4">
+                    <form id="myForm" action="quiz.html" method="post">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="question1">Q1: How many mountain ranges in Pakistan?</label>
+                            </div>
+                            <div class="row p-4">
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="3" name="question1" id="q1_option1">
+                                        <label class="form-check-label" for="q1_option1">3</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="2" name="question1" id="q1_option2">
+                                        <label class="form-check-label" for="q1_option2">2</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="5" name="question1" id="q1_option3">
+                                        <label class="form-check-label" for="q1_option3">5</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="4" name="question1" id="q1_option4">
+                                        <label class="form-check-label" for="q1_option4">4</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="question2">Q2: What is the capital of France?</label>
+                            </div>
+                            <div class="row p-4">
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="London" name="question2" id="q2_option1">
+                                        <label class="form-check-label" for="q2_option1">London</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="Paris" name="question2" id="q2_option2">
+                                        <label class="form-check-label" for="q2_option2">Paris</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="Berlin" name="question2" id="q2_option3">
+                                        <label class="form-check-label" for="q2_option3">Berlin</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="Rome" name="question2" id="q2_option4">
+                                        <label class="form-check-label" for="q2_option4">Rome</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="question3">Q3: What is the largest ocean in the world?</label>
+                            </div>
+                            <div class="row p-4">
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="Atlantic" name="question3" id="q3_option1">
+                                        <label class="form-check-label" for="q3_option1">Atlantic</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="Indian" name="question3" id="q3_option2">
+                                        <label class="form-check-label" for="q3_option2">Indian</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="Arctic" name="question3" id="q3_option3">
+                                        <label class="form-check-label" for="q3_option3">Arctic</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="Pacific" name="question3" id="q3_option4">
+                                        <label class="form-check-label" for="q3_option4">Pacific</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="question3">Q3: Who is CM of KP?</label>
+                            </div>
+                            <div class="row p-4">
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="Mariyam Nawaz" name="question4" id="q4_option1">
+                                        <label class="form-check-label" for="q4_option1">Mariyam Nawaz</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="Bilawal Bhutto" name="question4" id="q4_option2">
+                                        <label class="form-check-label" for="q4_option2">Bilawal Bhutto</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="Ali Amin" name="question4" id="q4_option3">
+                                        <label class="form-check-label" for="q4_option3">Ali Amin</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="Amial Wali" name="question4" id="q4_option4">
+                                        <label class="form-check-label" for="q4_option4">Amial Wali</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="question3">Q5: What is the capital of KPK?</label>
+                            </div>
+                            <div class="row p-4">
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="Peshawar" name="question5" id="q5_option1">
+                                        <label class="form-check-label" for="q5_option1">Peshawar</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="Mardan" name="question5" id="q5_option2">
+                                        <label class="form-check-label" for="q5_option2">Mardan</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="Kohat" name="question5" id="q5_option3">
+                                        <label class="form-check-label" for="q5_option3">Kohat</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="Lahore" name="question5" id="q5_option4">
+                                        <label class="form-check-label" for="q5_option4">Lahore</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 d-flex justify-content-center pt-4">
+                                <button type="submit" class="btn submitbtn"  id="btn">Submit</button>
+                                <button class="btn resultsbtn" style="display: none;" onclick="window.location.href='results.html'">Results</button>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    let marks = 0;
+    // question 1
+    let q1_answers = document.getElementsByName('question1');
+    for (let i = 0; i < q1_answers.length; i++) {
+        if (q1_answers[i].checked && q1_answers[i].value === "4") {
+            q1_answers[i].nextElementSibling.classList.add('correct-answer');
+            marks++;
+        } else if (q1_answers[i].checked) {
+            q1_answers[i].nextElementSibling.classList.add('wrong-answer');
+        }
+    }
+
+    // question 2
+    let q2_answers = document.getElementsByName('question2');
+    for (let i = 0; i < q2_answers.length; i++) {
+        if (q2_answers[i].checked && q2_answers[i].value === "Paris") {
+            q2_answers[i].nextElementSibling.classList.add('correct-answer');
+            marks++;
+        } else if (q2_answers[i].checked) {
+            q2_answers[i].nextElementSibling.classList.add('wrong-answer');
+        }
+    }
+
+    // question 3
+    let q3_answers = document.getElementsByName('question3');
+    for (let i = 0; i < q3_answers.length; i++) {
+        if (q3_answers[i].checked && q3_answers[i].value === "Pacific") {
+            q3_answers[i].nextElementSibling.classList.add('correct-answer');
+            marks++;
+        } else if (q3_answers[i].checked) {
+            q3_answers[i].nextElementSibling.classList.add('wrong-answer');
+        }
+    }
+
+    // question 4
+    let q4_answers = document.getElementsByName('question4');
+    for (let i = 0; i < q4_answers.length; i++) {
+        if (q4_answers[i].checked && q4_answers[i].value === "Ali Amin") {
+            q4_answers[i].nextElementSibling.classList.add('correct-answer');
+            marks++;
+        } else if (q4_answers[i].checked) {
+            q4_answers[i].nextElementSibling.classList.add('wrong-answer');
+        }
+    }
+
+    // question 5
+    let q5_answers = document.getElementsByName('question5');
+    for (let i = 0; i < q5_answers.length; i++) {
+        if (q5_answers[i].checked && q5_answers[i].value === "Peshawar") {
+            q5_answers[i].nextElementSibling.classList.add('correct-answer');
+            marks++;
+        } else if (q5_answers[i].checked) {
+            q5_answers[i].nextElementSibling.classList.add('wrong-answer');
+        }
+    }
+
+    sessionStorage.setItem('marks', marks);
+    console.log(marks);
+
+    document.getElementById('myForm').querySelectorAll('input[type="radio"]').forEach((input) => {
+        input.disabled = true;
+    });
+    let submitbtn = document.querySelector('.submitbtn');
+    submitbtn.style.display = 'none';
+
+    let resultbtn = document.querySelector('.resultsbtn');
+    resultbtn.style.display = 'block';
+});
+
+    </script>
+</body>
+</html>

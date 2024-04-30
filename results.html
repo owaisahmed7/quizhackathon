@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card{
+            box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.1);
+            border: none;
+            border-radius: 15px;
+            background-color: rgba(255,255,255,0.1);
+        }
+        body{
+            background-color: #1d3557;
+        }
+        .results{
+            font-size: 20px;
+            font-weight: 600;
+        }
+        #card{
+            background-color: #457b9d;
+        }
+    </style>
+</head>
+<body>
+    <div class="maindiv d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="col-md-md-6">
+            <div class="card p-4 my-4" id="card">
+                <div class="heading ">
+                    <h3 class="d-flex justify-content-center">Saylani Quiz App</h3>
+                    <h4 class="d-flex justify-content-center">Results</h4>
+                </div>
+                <div class="results mt-4">
+                    <div class="row ">
+                        <div class="col-md-12 showrollno"></div>
+                        <div class="col-md-12 showname"></div>
+                        <div class="col-md-6 showbatch"></div>
+                        <div class="col-md-6 showsection"></div>
+                        <strong class="p-4"><div class="col-md-12 showmarks"></div></strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let showrollno = document.querySelector('.showrollno');
+        let showname = document.querySelector('.showname');
+        let showbatch = document.querySelector('.showbatch');
+        let showsection = document.querySelector('.showsection');
+        let showmarks = document.querySelector('.showmarks');
+
+        var rollnumber = sessionStorage.getItem('rollno');
+        var name = sessionStorage.getItem('name');
+        var batch = sessionStorage.getItem('batch');
+        var section = sessionStorage.getItem('section');
+        var marks = sessionStorage.getItem('marks');
+    
+        showrollno.textContent= `Roll No:  ${rollnumber}`;
+        showname.textContent= `Name:  ${name}`;
+        showbatch.textContent= `Batch:  ${batch}`;
+        showsection.textContent= `Section:  ${section}`;
+        showmarks.textContent= `Marks:  ${marks}0`;
+        
+        console.log("Roll Number: " + rollnumber);
+        console.log("Name: " + name);
+        console.log("Batch: " + batch);
+        console.log("Section: " + section);
+        console.log("Marks: " + marks);
+    </script>
+</body>
+</html>
