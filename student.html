@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #838383;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+        #form{
+            align-items: center;
+          height: 520px;
+          width: 650px;
+          background-color: rgba(255, 255, 255, 0.13);
+          border-radius: 10px;
+          backdrop-filter: blur(10px);
+          border: 2px solid rgba(255, 255, 255, 0.3);
+          box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+          padding: 50px 35px;
+}
+        body{
+            font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+            background-image: url(Assets/LogIn\ BackGround\ Cover\ Photo.jpg);
+            background-size: cover;
+        }
+        button {
+    position: relative;
+    margin: 0;
+    padding: 0.8em 1em;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    background-color: #333;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 18px;
+    font-family: inherit;
+    z-index: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+  }
+  
+  button:hover {
+    animation: sh0 0.5s ease-in-out both;
+  }
+  
+  @keyframes sh0 {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  
+    25% {
+      transform: rotate(7deg) translate3d(0, 0, 0);
+    }
+  
+    50% {
+      transform: rotate(-7deg) translate3d(0, 0, 0);
+    }
+  
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+  
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+  
+  button:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+  }
+  
+  button::before,
+  button::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+    transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+    z-index: -1;
+    transform: translate(100%, -25%) translate3d(0, 0, 0);
+  }
+  
+  button:hover::before,
+  button:hover::after {
+    opacity: 0.15;
+    transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+  }
+  
+  button:hover::before {
+    transform: translate3d(50%, 0, 0) scale(0.9);
+  }
+  
+  button:hover::after {
+    transform: translate(50%, 0) scale(1.1);
+  }
+
+    </style>
+</head>
+<body>
+    <div class="maindiv d-flex justify-content-center align-items-center" id="form">
+        <div class="col-md-4">
+            <div class="card p-4" id="card">
+                <div class="heading ">
+                    <h3 class="d-flex justify-content-center">Saylani Quiz App</h3>
+                    <h4 class="d-flex justify-content-center">Sign In</h4>
+                </div>
+                <div class="signinform mt-4">
+                    <form id="myForm" action="quiz.html" method="post">
+                        <div class="row">
+                            <div class="col-md-12 pb-2">
+                                <label for="rollnumber"><strong>Roll Number</strong></label>
+                            </div>
+                            <div class="col-md-12 pb-2">
+                                <input type="text" name="rollnumber" class="form-control rollnumber" placeholder="Enter Roll No">
+                            </div>
+                            <div class="col-md-12 pb-2">
+                                <label for="name"><strong>Name</strong></label>
+                            </div>
+                            <div class="col-md-12 pb-2">
+                                <input type="text" name="name" class="form-control name" placeholder="Name">
+                            </div>
+                            <div class="col-md-12 pb-2">
+                                <label for="batch"><strong>Batch</strong></label>
+                            </div>
+                            <div class="col-md-12 pb-2">
+                                <input type="text" name="batch" class="form-control batch" placeholder="Batch">
+                            </div>
+                            <div class="col-md-12 pb-2">
+                                <label for="section"><strong>Section</strong></label>
+                            </div>
+                            <div class="col-md-12 pb-2">
+                                <input type="text" name="section" class="form-control section" placeholder="Section">
+                            </div>
+                        </div>
+                        <div class="col-md-12 d-flex justify-content-center pt-4">
+                            <button type="submit" class="btn w-100" id="btn">Sign In</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            let rollno = document.querySelector('.rollnumber');
+            let name = document.querySelector('.name');
+            let batch = document.querySelector('.batch');
+            let section = document.querySelector('.section');
+
+            if (!rollno.value || !name.value || !batch.value || !section.value) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            sessionStorage.setItem('rollno', rollno.value);
+            sessionStorage.setItem('name', name.value);
+            sessionStorage.setItem('batch', batch.value);
+            sessionStorage.setItem('section', section.value);
+
+            console.log(`${rollno.value},${name.value},${batch.value},${section.value}`);
+
+            // Redirect to quiz.html
+            window.location.href = "quiz.html";
+        });
+    </script>
+</body>
+</html>
